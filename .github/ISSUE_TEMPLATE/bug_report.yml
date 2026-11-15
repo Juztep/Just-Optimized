@@ -1,0 +1,74 @@
+
+name: Bug Report
+description: Report a problem with Just Optimized
+title: "[Bug]: "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem!
+        I maintain this modpack on my own, so please provide as much detail as possible.
+
+  - type: input
+    id: pack_version
+    attributes:
+      label: Modpack Version
+      description: Which version of Just Optimized are you using?
+      placeholder: "Example: 26.3-1.1.1+beta.1"
+    validations:
+      required: true
+
+  - type: input
+    id: minecraft_version
+    attributes:
+      label: Minecraft Version
+      description: Which Minecraft version are you playing on?
+      placeholder: "Example: 1.21.1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: loader
+    attributes:
+      label: Mod Loader
+      description: Which mod loader are you using?
+      options:
+        - Fabric
+        - Forge
+        - NeoForge
+        - Quilt
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's the issue?
+      description: Describe what happened and what you expected to happen instead.
+      placeholder: Explain the problem here...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: How can I reproduce it?
+      description: List the steps that cause the issue, if you know them.
+      placeholder: |
+        1. Launch the game
+        2. Join a world
+        3. ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Crash Logs (Optional)
+      description: If the game crashed, paste the crash report or relevant latest.log content here.
+      placeholder: Paste logs here...
+    validations:
+      required: false
+      
